@@ -1,3 +1,8 @@
+"""
+Code pulls data from the federal reservee exchange chart 
+and uses it to do rough currency conversions.
+"""
+
 #import library
 import requests
 import pandas as pd
