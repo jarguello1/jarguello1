@@ -42,9 +42,10 @@ upper_rows = list(range(5,24))
 extra_currencies = ['AUD', 'EUR', 'NZD', 'GBP']
 
 print("\nThis program only converts to and from USD at the moment.")
-#Input statements for type of currency, converting to or from USD and the amount to be converted.
+#For statement to print list of possible currencies.
 for i in range(1,24):
 	print(f"{i} {df.iloc[i]['index']}")
+#Input statements for type of currency, converting to or from USD and the amount to be converted.
 currency = input("\nPlease input the currency you are converting. (1-23) ")
 to_or_from = input("\nWould you like to convert to USD or from USD? T/F ")
 amount = (input("\nPlease input that amount you would like to exchange? "))
