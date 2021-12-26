@@ -38,6 +38,8 @@ currency = ''
 amount = 0
 #Range for rows 5-23
 upper_rows = list(range(5,24))
+#Need to make a list for extra currencies that are present in the df.
+extra_currencies = ['AUD', 'EUR', 'NZD', 'GBP']
 
 print("\nThis program only converts to and from USD at the moment.")
 #Input statements for type of currency, converting to or from USD and the amount to be converted.
@@ -53,25 +55,32 @@ def convert_money():
 	Only works with currencies on the federal reserve foreign exchange rates
 	"""
 	if int(currency) in [1,2,3,4] and to_or_from.lower() == 't':
-		#AUD, EUR, NZD, GBP values are presented in USD for the federal reserve so there has to be a separate if statement for these currencies.
+		"""
+		AUD, EUR, NZD, GBP values are presented in USD for the federal reserve so there has to be a separate if statement for these currencies.
+		"""
+		#Converts currencies to USD to respective currencies.
 		new_currency = float(amount) * float(df.iloc[int(currency)][1])
 		print(f'{new_currency} {df.iloc[int(currency)][0]}')
 		return new_currency
 
 	elif int(currency) in upper_rows and to_or_from.lower() == 't':
-		#Converts currencies to USD
+		#Converts currencies to USD to respective currencies.
 		new_currency = float(amount) / float(df.iloc[int(currency)][1])
 		print(f'{new_currency} {df.iloc[1][0]}')
 		return new_currency
 
 	elif int(currency) in [1,2,3,4] and to_or_from.lower() == 'f':
-		#AUD, EUR, NZD, GBP values are presented in USD for the federal reserve so there has to be a separate if statement for these currencies.
+		"""
+		AUD, EUR, NZD, GBP values are presented in USD for the federal reserve so there has to be a separate if statement for these currencies.
+		"""
+		#Converts currencies to USD to respective currencies.
 		new_currency = float(amount) / float(df.iloc[int(currency)][1])
-		print(f'{new_currency} {df.iloc[int(currency)][0]}')
+		#Subtract 1 from the currency value to obtain the right currency marker from the extra_currencies list.
+		print(f'{new_currency} {extra_currencies[int(currency)-1]}')
 		return new_currency
 
 	elif int(currency) in upper_rows and to_or_from.lower() == 'f':
-		#Converts currencies to USD
+		#Converts currencies from USD to respective currencies.
 		new_currency = float(amount) * float(df.iloc[int(currency)][1])
 		print(f'{new_currency} {df.iloc[int(currency)][0]}')
 		return new_currency
