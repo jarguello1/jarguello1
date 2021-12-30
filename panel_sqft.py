@@ -69,6 +69,5 @@ def main():
             del number_of_panels[del_input-1]
             
 
-             
 if __name__ == '__main__':
     main()
