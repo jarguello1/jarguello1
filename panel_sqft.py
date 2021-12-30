@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Aug  5 09:19:02 2021
 
@@ -7,17 +6,15 @@ Created on Thu Aug  5 09:19:02 2021
 
 import numpy as np
 
-#panel dimensions    
+#User inputs are stored in the following lists  
 panel_x = []
 panel_y = []
-
-#number of each size panel
 number_of_panels = []
 
 #if main function for importing and for stopping the script
 def main():
     
-    #while function to loop function
+    #while loop to continue taking values as needed
     while True:
 
         #inputs for panel dimensions and continuing the program
@@ -33,7 +30,7 @@ def main():
             panel_y.append(p_y)
             number_of_panels.append(panel_quantity)
         
-        #Readout panel dimension
+        #Print panel dimensions to keep track and spot errors
         print(f"\nPanel is {p_x}*{p_y}")
         for i in range(min(len(panel_x), len(panel_y), len(number_of_panels))):
             print(f"{panel_x[i]}x{panel_y[i]} {number_of_panels[i]}")
