@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Jose, @jarguello1
-- 👀 I’m interested in learning programming specifically in regards to data science, data engineering and general software engineering.
-- 🌱 I’m currently learning python.
+- 👀 I’m interested in learning programming specifically in regards to to software development.
+- 🌱 I’m currently working on python, java, and learning web development.
 - 💞️ I’m looking to collaborate on any projects to grow my portfolio.
 - 📫 How to reach me? https://api.github.com/users/jarguello1/events/public
 
